@@ -31,7 +31,8 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 <script type="text/babel">
-
+//ATENÇÃO : A DIFERENTE ENTRE PROPS E STATE É QUE PROPS É APENAS DE LEITURA OU SEJA O SEU VALOR DEPOIS DE DEFINIDO JÁ SÃO SERÁ ALTERADO EM 
+//NUNHUM LADO DO ESCOPO DA APLICAÇÃO OU COMPONENTE O STATE É O CONTRÁRIO
   class App extends React.Component{
 
     constructor(){
@@ -48,7 +49,7 @@
             <div>
                <h1>State no react</h1>
                
-               <p>Nome: {this.state.nome}</p>
+               <p>Nome: {this.state.nome} {this.props.apelido}</p>
                <p>Idade:{this.state.idade}</p>
             </div>
         )
@@ -57,7 +58,7 @@
 
   
     const root=document.getElementById('root');
-    ReactDOM.render(<App/>,root);
+    ReactDOM.render(<App apelido="Augusto" />,root);
 
 </script>
 </html>
