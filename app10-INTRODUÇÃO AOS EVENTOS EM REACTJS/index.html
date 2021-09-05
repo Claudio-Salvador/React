@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRODUÇÃO AOS EVENTOS EM REACTJS</title>
+
+
+</head>
+<body>
+    
+    <h1>INTRODUÇÃO AOS EVENTOS EM REACTJS</h1>
+    <div id="root">
+
+    </div>
+    
+</body>
+
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+
+
+
+
+class App extends React.Component{
+
+
+//Método construtor
+    constructor (props){
+        super(props)
+
+        this.state={
+            nome:"Claudio",
+            idade:35
+        }
+        this.btn_clique=this.btn_clique.bind(this)
+    }
+//Evento clique
+btn_clique() {
+    this.setState({nome: "Kaizer"})
+}
+
+// Render
+    render(){
+        const estilo={color:"white",backgroundColor:"Black",padding:"20px",borderRadius:"4px"};
+        
+        return(
+            <div>
+                <p>Clique no botao Para chamar ver dados</p>
+                <p>Nome:{this.state.nome}</p>
+                <p>Idade:</p>
+                <button style={estilo} onClick={this.btn_clique}>Clique-me</button>
+            </div>
+        )
+    }
+}   
+
+
+
+    const root=document.getElementById('root');
+    ReactDOM.render(<App/>, root);
+
+</script>
+</html>
