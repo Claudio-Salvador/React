@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css no react </title>
+
+ <style>
+     .chocolate{
+         background-color: chocolate;
+         color: white;
+         padding: 10px;
+     }
+     .red{
+         background-color: red;
+         color: white;
+         padding: 10px;
+     }
+ </style>   
+</head>
+<body>
+    <h3>Style na mesma linha da tag</h3>
+    <div id="root">
+
+    </div>
+    
+</body>
+
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+//Nota: Para estilo inline,devemos criar um objecto js e passar a propriedade Style da Tag
+//As propriedades Css que são separadas por ífen devem ser substituida o ífen e juntar a letra a seguir em maiúsculo.
+  
+  class App extends React.Component{
+    render(){
+        return(
+            <div>
+               <p style={{color:"red",backgroundColor:"green",padding:"10px"}}>Texto de edição css dentro da TAG HTML com REACT JS</p>  
+            </div>
+        )
+    }
+  }
+
+  
+    const root=document.getElementById('root');
+    ReactDOM.render(<App/>,root);
+
+</script>
+</html>
