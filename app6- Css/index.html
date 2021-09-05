@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css no react</title>
+
+ <style>
+     .chocolate{
+         background-color: chocolate;
+         color: white;
+         padding: 10px;
+     }
+     .red{
+         background-color: red;
+         color: white;
+         padding: 10px;
+     }
+ </style>   
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    
+</body>
+
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+
+  class AppA extends React.Component{
+    render(){
+        return(
+            <div className="chocolate">
+                <center>
+                    <p>Texto de class css com react Component A</p>    
+                </center>    
+            </div>
+        )
+    }
+  }
+
+
+  class AppB extends React.Component{
+    render(){
+        return(
+            <div className="red">
+                <center>
+                    <p>Texto de class css com react Component B</p>   
+                </center>    
+            </div>
+        )
+    }
+  }
+
+  class App extends React.Component{
+    render(){
+        return(
+            <div>
+                <AppA/>   
+                <AppB/>   
+            </div>
+        )
+    }
+  }
+
+  
+    const root=document.getElementById('root');
+    ReactDOM.render(<App/>,root);
+
+</script>
+</html>
