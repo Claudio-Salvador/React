@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PArent and child no react</title>
+
+ <style>
+     .chocolate{
+         background-color: chocolate;
+         color: white;
+         padding: 10px;
+     }
+     .red{
+         background-color: red;
+         color: white;
+         padding: 10px;
+     }
+ </style>   
+</head>
+<body>
+    
+    <h1>UTILIZAÇÃO DE STATE E PROPS ENTRE PARENT E CHILD COMPONENTS</h1>
+    <div id="root">
+
+    </div>
+    
+</body>
+
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+
+class Nome extends React.Component{
+    render(){
+        return(
+          
+                
+            <p>Nome: {this.props.nome}</p>
+        )
+    }
+}
+class Idade  extends React.Component{
+    render(){
+        return(
+            <p>Idade: {this.props.idade}</p>
+        )
+    }
+}
+
+
+
+class Indentificacao extends React.Component{
+constructor(){
+    super()
+    this.state={
+        nome:"Cláudio",
+        idade:24
+    }
+}
+
+    render(){
+        this.state.nome="Francisco";
+        return(
+            <div>
+               <Nome nome={this.state.nome}/>  
+               <Idade idade={this.state.idade}/>  
+            </div>
+        )
+    }
+}   
+
+
+
+    const root=document.getElementById('root');
+    ReactDOM.render(<Indentificacao/>, root);
+
+</script>
+</html>
