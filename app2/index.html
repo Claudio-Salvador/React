@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>react- app 1</title>
+    <title>react- app 02</title>
 </head>
 <body>
        <div id="root">
@@ -17,9 +17,19 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 <script type="text/babel">
+    
+function MeuComponent(){
+    var nome="Cláudio";
+    var apelido="Salvador";
+    return(
+        <div>
+            <h1>Estudo de component React</h1> 
+            <p> O meu nome é {nome} {apelido}</p>   
+            <p> Estou gostando do aprendizado </p>   
+        </div>
+    )
+}
     const root=document.getElementById('root');
-    let nome="Cláudio Salvador";
-
-    ReactDOM.render(<h1>O meu nome é {nome}</h1>,root);
+    ReactDOM.render(<MeuComponent/>,root);
 
 </script>

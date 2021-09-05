@@ -1,0 +1,7 @@
+#Este exemplo é referente a criação de um function component com React
+#Usando tecnicas.
+
+##
+Atenção
+01-Os componentes React a sua nomenclatura deve sempre iniciar em letra maiúscula.
+02-O retorno do html deve ser feito em um elemento pai como <div> , para que jsx consiga fazer o wapred e ler todo o conteúdo.

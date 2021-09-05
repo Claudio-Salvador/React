@@ -1,0 +1,20 @@
+#Neste exemplo vou aolicar os conceitos de Components Props.
+Que de uma forma geral é designado por Propriedades.
+
+#De modo geral é que os conceitos aplicados em outros exemplos servem de área específicas para aplicar os props.
+ou seja o Props podem se m aplicados nas functions Components ou nas class components.
+
+Atenção
+01- Ao Declarar props 
+
+no component Function ::Passa-se a propriedade props por paramêtro
+#Exempos function CompA(props)
+no component Class ::Passa-se a referencia por (this.)
+#Exempos 
+
+
+
+-----------------------------------------------------------
+Mais.html
+
+Exemplo de outros modos de trabalhar com props, passando Número cnas propriedades

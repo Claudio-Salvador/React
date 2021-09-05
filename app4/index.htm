@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react- app 04</title>
+</head>
+<body>
+       <div id="root">
+
+       </div>
+</body>
+</html>
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel">
+    var nomes ="Francisco"
+    // Usando props com Function
+    function ComponentProps(props){
+        return(
+            <div>
+                <h1>O meu nome é {props.nome} {props.apelido}</h1>    
+            </div>
+        )
+    }
+
+    // Usando props com Class
+    class ComponentPropsB extends React.Component{
+            render(){
+                return(
+                    <div>
+                        <h1>O meu nome é {this.props.nome} {this.props.apelido}</h1>   
+                    </div>
+                )
+            }
+
+        }
+  
+        
+    const root=document.getElementById('root');
+    ReactDOM.render(<ComponentPropsB nome="Claudio Salvador " apelido="Fernando" />,root);
+
+</script>

@@ -1,0 +1,8 @@
+#Este exemplo é referente a criação de um Class component com React
+#Criei a incorporação de compontes dentro de componentes
+##
+Atenção
+01-As class componet têm claramente mais funcionalidades que os function component, razão pela qual é mais frequente o seu uso.
+02-Colocar sempre a função render(), quando se está a utilizar a class component.
+
+
