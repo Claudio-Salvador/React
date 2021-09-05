@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Css no react </title>
+    <title>state no react</title>
 
  <style>
      .chocolate{
@@ -20,7 +20,6 @@
  </style>   
 </head>
 <body>
-    <h3>Style na mesma linha da tag</h3>
     <div id="root">
 
     </div>
@@ -32,16 +31,25 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 <script type="text/babel">
-//Nota: Para estilo inline,devemos criar um objecto js e passar a propriedade Style da Tag
-//As propriedades Css que são separadas por ífen devem ser substituida o ífen e juntar a letra a seguir em maiúsculo.
-  
-  class App extends React.Component{
-    render(){
 
-            const estilo={color:"red",backgroundColor:"green",padding:"10px"};
+  class App extends React.Component{
+
+    constructor(){
+        super()
+        this.state={
+            nome:"Alberto",
+            idade:25
+        }
+
+    }      
+
+    render(){
         return(
             <div>
-               <p style={estilo}>Texto de edição css dentro da TAG HTML com REACT JS</p>  
+               <h1>State no react</h1>
+               
+               <p>Nome: {this.state.nome}</p>
+               <p>Idade:{this.state.idade}</p>
             </div>
         )
     }
